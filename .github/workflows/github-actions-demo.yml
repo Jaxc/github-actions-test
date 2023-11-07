@@ -12,7 +12,7 @@ jobs:
         run: repo init -u https://github.com/STMicroelectronics/oe-manifest.git -b refs/tags/openstlinux-6.1-yocto-mickledore-mp1-v23.06.21 && repo sync
 
       - name: Create env
-        run: echo -e "y\r\ny"  | DISTRO=openstlinux-weston MACHINE=stm32mp1 source layers/meta-st/scripts/envsetup.sh
+        run: echo -e "y\ny"  | DISTRO=openstlinux-weston MACHINE=stm32mp1 source layers/meta-st/scripts/envsetup.sh
 
       - name: Compile
         run: bitbake st-image-weston
