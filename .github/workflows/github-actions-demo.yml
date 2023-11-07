@@ -6,7 +6,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Install dependencies
-        run: sudo apt-get install repo
+        run: sudo apt-get install repo bsdmainutils chrpath diffstat gcc-multilib libegl1-mesa libmpc-dev libsdl1.2-dev pylint python3-git socat xterm
 
       - name: Check out files
         run: repo init -u https://github.com/STMicroelectronics/oe-manifest.git -b refs/tags/openstlinux-6.1-yocto-mickledore-mp1-v23.06.21 && repo sync
